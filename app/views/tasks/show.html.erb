@@ -1,0 +1,11 @@
+<h1><%= @task.title %></h1>
+<p class="show-box"><%= @task.details %></p>
+
+
+<% if @task.completed == true %>
+<p><%= "This task has been completed 🥳" %></p>
+<% elsif @task.completed == false %>
+<p><%= "This task has not been completed" %></p>
+<% end %>
+<p class = "btn btn-secondary"><%= link_to "Back", list_path,  class: "button" %></p>
+<p class = "btn btn-primary"><%= link_to "Edit this task", edit_task_path,  class: "button" %></p>

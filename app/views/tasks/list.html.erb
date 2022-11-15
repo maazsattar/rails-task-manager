@@ -1,0 +1,18 @@
+<h1>My Tasks</h1>
+
+<% @tasks.each do |t| %>
+  <div style = "display: flex;">
+    <p class = "list"><%= form_with model: t do |f| %>
+        <%= f.check_box :completed %>
+      <% end %></p>
+    <p class = "list"><%= link_to t.title, task_path(t.id) %></p>
+    <i class="fa-regular fa-trash-can list" style = "color: #2074fc;"><%= link_to "Delete", delete_task_path(t.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></i>
+  </div>
+  <% end %>
+
+<p class = "list"><%= link_to "Create a new task", tasks_new_path%></p>
+</ul>
+
+<%# <%= link_to "Delete", delete_task_path(t.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+  <%# <i class="fa-regular fa-trash-can list" style = "color: #2074fc;"
+<% end %>

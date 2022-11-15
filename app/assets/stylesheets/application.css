@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&family=Oswald&display=swap');
+
+ h1 {
+  font-family: 'Oswald', sans-serif;
+ }
+
+ body {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 25px;
+ }
+
+ .list {
+  padding-left: 10px;
+ }
+
+ .show-box {
+  background-color: rgb(232, 232, 232);
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid lightgrey;
+  width: 100%;
+ }
+
+.button {
+  color: white;
+}
+.button:hover{
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
